@@ -16,7 +16,12 @@ namespace TSP_3
 
         private void StartButton_Click(object sender, EventArgs e)
         {
+            SimulationMarkov simulationMarkov = new SimulationMarkov();
 
+            double test = Convert.ToDouble(S0TextBox.Text);
+
+            chart1.Series[0].Points.AddY(Convert.ToDouble(simulationMarkov.Sim(Convert.ToDouble(S0TextBox.Text),
+                Convert.ToDouble(S1TextBox.Text), Convert.ToDouble(S2TextBox.Text))));
         }
     }
 }
