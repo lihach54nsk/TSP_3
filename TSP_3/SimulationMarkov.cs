@@ -10,14 +10,14 @@ namespace TSP_3
     {
         Random random = new Random();
 
-        public int Sim(double S0, double S1, double S2) => Simulate(S0, S0 + S1, S0 + S1 + S2);
+        public int Sim(double S0, double S1, double S2, double[] matrix) => Simulate(S0, S0 + S1, S0 + S1 + S2, matrix);
 
-        int Simulate(double S0, double S1, double S2)
+        int Simulate(double S0, double S1, double S2, double[] matrix)
         {
             int N = 0;
             int S = 0; // состояние
             double r;
-            double[] matrix = { 0.4, 0.8, 1, 0, 0.5, 1, 0, 0, 1 }; // матрица переходов
+            //double[] matrix = { 0.4, 0.8, 1, 0, 0.5, 1, 0, 0, 1 }; // матрица переходов
 
             r = random.NextDouble();
 
